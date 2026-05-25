@@ -489,14 +489,52 @@
     width: auto;
     margin: 0 24px 40px;
   }
+}.contact-form {
+    max-width: 700px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
-    footer {
+
+.contact-form input,
+.contact-form textarea {
+    background: #111;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+.contact-form textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #ff7f26;
+}
+
+footer {
       border-top: 1px solid #222;
       padding: 28px 0;
       color: #777;
       text-align: center;
       font-size: 14px;
-    }
+}
 
     @media (max-width: 900px) {
       nav { display: none; }
@@ -648,14 +686,27 @@
 
 <section id="contact" class="section">
   <div class="container">
+
     <div class="section-title">
       <div class="sub">Trade Enquiry</div>
       <h2>Request Trade Pricing</h2>
       <div class="underline"></div>
     </div>
-    <p style="text-align:center;color:#ccc;font-size:20px;">
-      Email: <strong>Info@VulcaFleece.com</strong>
-    </p>
+
+    <form action="https://formspree.io/f/info@vulcafleece.com" method="POST" class="contact-form">
+
+      <input type="text" name="name" placeholder="Your Name" required>
+
+      <input type="email" name="email" placeholder="Your Email" required>
+
+      <input type="text" name="company" placeholder="Company Name">
+
+      <textarea name="message" placeholder="Your enquiry..." required></textarea>
+
+      <button type="submit">Send Enquiry</button>
+
+    </form>
+
   </div>
 </section>
   
