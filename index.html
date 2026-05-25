@@ -555,6 +555,9 @@
   </a>
 </div>
   </div>
+<div class="hero-roll-image">
+  <img src="VulcaFleeceImages/VulcaFleece_EPDM_Roll_Image.png" alt="VulcaFleece EPDM Roll">
+</div>
 </section>
 
 <section class="benefits">
@@ -643,7 +646,29 @@
     </p>
   </div>
 </section>
+.hero-roll-image {
+  position: absolute;
+  right: 60px;
+  bottom: 40px;
+  width: 460px;
+  z-index: 2;
+}
 
+.hero-roll-image img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 25px 40px rgba(0,0,0,.7));
+}
+
+@media (max-width: 900px) {
+  .hero-roll-image {
+    position: relative;
+    width: 90%;
+    margin: 30px auto;
+    right: auto;
+    bottom: auto;
+  }
+}
 <footer>
   VulcaFleece Roofing Systems · Stronger Materials. Smarter Roofs.
 </footer>
