@@ -648,25 +648,29 @@
 </section>
 .hero-roll-image {
   position: absolute;
-  right: 60px;
-  bottom: 40px;
-  width: 460px;
-  z-index: 2;
+  right: 360px;
+  bottom: 55px;
+  width: 360px;
+  z-index: 3;
+  background: transparent;
 }
 
 .hero-roll-image img {
   width: 100%;
   height: auto;
-  filter: drop-shadow(0 25px 40px rgba(0,0,0,.7));
+  display: block;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 20px 45px rgba(0,0,0,.65);
 }
 
 @media (max-width: 900px) {
   .hero-roll-image {
     position: relative;
-    width: 90%;
-    margin: 30px auto;
     right: auto;
     bottom: auto;
+    width: 90%;
+    margin: 20px auto;
   }
 }
 <footer>
